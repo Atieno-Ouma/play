@@ -8,29 +8,28 @@ def print_hi(name):
     # Use a breakpoint in the code line below to debug your script.
     print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
 
-# function that creates a flower_dictionary from filename
-def create_flowerdict(filename):
-    flower_dict = {}
-    with open(filename) as f:
-        for line in f:
-            letter = line.split(": ")[0].lower()
-            flower = line.split(": ")[1].strip()
-            flower_dict[letter] = flower
-    return flower_dict
+#task
+points=int(input('please enter your points'))
 
-# Main function that prompts for user input, parses out the first letter
-# includes function call for create_flowerdict to create dictionary
-def main():
-    flower_d = create_flowerdict('flowers.txt')
-    full_name = input("Enter your First [space] Last name only: ")
-    first_name = full_name[0].lower()
-    first_letter = first_name[0]
-# print command that prints final input with value from corresponding key in dictionary
-    print("Unique flower name with the first letter: {}".format(flower_d[first_letter]))
+prize_name=['wooden_rabbit','no prize','wafer-thin_mint','penguin']
+    if points<=50:
+     prize = prize_name[0]
+    elif points>=51 and points<=150:
+     prize=prize_name[1]
+    elif points>=151 and points<=180:
+     prize = prize_name[2]
+    elif points >= 181 and points <= 200:
+     prize = prize_name[3]
+    else:
+     print('Invalid Points.Please reenter valid points')
+message='You have won the {} Prize'.format(prize_name)
+print(message)
 
-main()
+
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     print_hi('PyCharm')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
+ if
+     
